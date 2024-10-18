@@ -5,7 +5,7 @@
         "height": 400,
         "projection": {"type": "equalEarth"},
         "data": {
-            "url": "../data/Australian_Merchandise_Exports_per_Country.csv",
+            "url": "Australian_Merchandise_Exports_per_Country.csv",
             "format": {"type": "csv"}
         },
         "transform": [
