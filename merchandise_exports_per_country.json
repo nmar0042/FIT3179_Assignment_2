@@ -5,7 +5,7 @@
         "height": 400,
         "projection": {"type": "equalEarth"},
         "data": {
-            "url": "Australian_Merchandise_Exports_per_Country.csv",
+            "url": "https://github.com/nmar0042/FIT3179_Assignment_2/blob/c12879a948bc4096ce6473247f901c41d31167ec/Australian_Merchandise_Exports_per_Country.csv",
             "format": {"type": "csv"}
         },
         "transform": [
