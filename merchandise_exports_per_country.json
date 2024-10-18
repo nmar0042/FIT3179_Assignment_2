@@ -1,0 +1,69 @@
+{
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "title": { "text": "Australian Merchandise Exports per Country" },
+        "width": 800,
+        "height": 400,
+        "projection": {"type": "equalEarth"},
+        "data": {
+            "url": "../data/Australian_Merchandise_Exports_per_Country.csv",
+            "format": {"type": "csv"}
+        },
+        "transform": [
+            {
+                "filter": "datum.Year == Year_Selection && datum.Month == Month_Selection"
+            },
+            {
+                "calculate": "datum.Exports == 0 ? 1 : datum.Exports", "as": "Exports"
+            },
+            {
+                "lookup": "Country",
+                "from": {
+                    "data": {
+                        "url": "ne_110m_admin_0_countries.topojson",
+                        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+                },
+                "key": "properties.NAME",
+                "fields": ["type", "geometry", "properties"]
+                }
+            }
+        ],
+        "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth":
+        0.5},
+        "encoding": {
+            "color": {
+                "field": "Exports",
+                "type": "quantitative",
+                "scale": {"type": "log", "domain": [1, 10000]}
+            },
+            "tooltip": [
+                {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+                {"field": "Exports", "type": "quantitative", "title": "Exports ($ Millions)"},
+                {"field": "Month", "type": "quantitative", "title": "Month"},
+                {"field": "Year", "type": "quantitative", "title": "Year"}
+            ]
+        },
+        "params": [
+            {
+                "name": "Year_Selection",
+                "value": 2023,
+                "bind": {
+                    "input": "range",
+                    "min": 1988,
+                    "max": 2023,
+                    "step": 1,
+                    "name": "Year: "
+                }
+            },
+            {
+                "name": "Month_Selection",
+                "value": 1,
+                "bind": {
+                    "input": "range",
+                    "min": 1,
+                    "max": 12,
+                    "step": 1,
+                    "name": "Month: "
+                }
+            }
+        ]
+}

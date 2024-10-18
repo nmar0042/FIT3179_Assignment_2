@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Vega Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 </head>
 <body>
     <h1>Heading 1</h1>
     <p>My First Paragraph</p>
+    <div id="Country_map"></div>
+    <p>*Note Belgium and Lexumbourg share the same values until 1/07/2003, 
+        Sudan uses the values of "Former Sudan" until 1/10/2012
+        Russia uses the values for the USSR until 1/09/1992
+        France includes all territories and 'Wallis and Futuna'
+        Hong Kong and Macau is included in China's total
+        The Federated states of Micronesia, Samoa and the United States Miscellaneous Islands,
+        Virgin Islands, United States are included in the USA's total
+        The Netherlands Antilles are included in the Netherlands' total
+        Polynesia is included in New Zealand's total
+        Serbia and Montenegro share the same data until 01/05/2008
+        Southern and East Africa is included in South Africa's total
+        Virgin Islands, British, Turks and Caicos Islands are included in the 
+        United Kingdom's total
+        Australian Antarctic Territory is included in Australia's total
+    </p>
+    <script type="text/javascript">
+  
+        var spec2 = "js/merchandise_exports_per_country.json";
+        vegaEmbed('#Country_map', spec2).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+    </script>
+    
 </body>
 </html>
