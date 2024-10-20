@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Australian Merchandise Value per State" },
+    "title": { "text": "Australian Merchandise Exports per State" },
     "width": 800,
     "height": 400,
     "projection": {"type": "mercator"},

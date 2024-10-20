@@ -5,7 +5,7 @@
         "height": 400,
         "projection": {"type": "equalEarth"},
         "data": {
-            "url": "https://github.com/nmar0042/FIT3179_Assignment_2/blob/c12879a948bc4096ce6473247f901c41d31167ec/Australian_Merchandise_Exports_per_Country.csv",
+            "url": "https://raw.githubusercontent.com/nmar0042/FIT3179_Assignment_2/3ce922df50f57b2675e6e1320d1dff3c844291eb/Australian_Merchandise_Exports_per_Country.csv",
             "format": {"type": "csv"}
         },
         "transform": [
@@ -19,7 +19,7 @@
                 "lookup": "Country",
                 "from": {
                     "data": {
-                        "url": "https://github.com/nmar0042/FIT3179_Assignment_2/blob/08c61c9502c9ed10461715950a8b6d6364529620/ne_110m_admin_0_countries.topojson",
+                        "url": "https://raw.githubusercontent.com/nmar0042/FIT3179_Assignment_2/refs/heads/main/ne_110m_admin_0_countries.topojson",
                         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
                 },
                 "key": "properties.NAME",
