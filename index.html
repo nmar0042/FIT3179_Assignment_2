@@ -11,9 +11,14 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 </head>
 <body>
-    <h1>Heading 1</h1>
-    <p>My First Paragraph</p>
+    <h1>Australian Exports per Country</h1>
+    <p>This dashboard, created by Nathan Marlow, a student at Monash University Australia, displays Australia's exports
+        to various countries and from various states from 1988 till 2023.
+    </p>
     <div id="Country_map"></div>
+    <p>This map demonstrates Australia's exports to different countries over the years from 1988 till 2023. 
+        The sliders can be used to change between various years 1988 to 2023 and the month slider between each month of the year
+    </p>
     <p>*Note Belgium and Lexumbourg share the same values until 1/07/2003. 
         Sudan uses the values of "Former Sudan" until 1/10/2012. 
         Russia uses the values for the USSR until 1/09/1992. 
@@ -32,11 +37,11 @@
 
     <script type="text/javascript">
   
-        var spec1 = "js/merchandise_exports_per_country.json";
+        var spec1 = "https://raw.githubusercontent.com/nmar0042/FIT3179_Assignment_2/refs/heads/main/merchandise_exports_per_country.json";
         vegaEmbed('#Country_map', spec1).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
-        var spec2 = "js/merchandise_exports_per_state.json";
+        var spec2 = "https://raw.githubusercontent.com/nmar0042/FIT3179_Assignment_2/refs/heads/main/merchandise_exports_per_state.json";
         vegaEmbed('#State_map', spec2).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
