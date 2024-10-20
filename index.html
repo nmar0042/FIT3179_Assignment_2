@@ -14,25 +14,30 @@
     <h1>Heading 1</h1>
     <p>My First Paragraph</p>
     <div id="Country_map"></div>
-    <p>*Note Belgium and Lexumbourg share the same values until 1/07/2003, 
-        Sudan uses the values of "Former Sudan" until 1/10/2012
-        Russia uses the values for the USSR until 1/09/1992
+    <p>*Note Belgium and Lexumbourg share the same values until 1/07/2003. 
+        Sudan uses the values of "Former Sudan" until 1/10/2012. 
+        Russia uses the values for the USSR until 1/09/1992. 
         France includes all territories and 'Wallis and Futuna'
-        Hong Kong and Macau is included in China's total
+        Hong Kong and Macau is included in China's total. 
         The Federated states of Micronesia, Samoa and the United States Miscellaneous Islands,
-        Virgin Islands, United States are included in the USA's total
-        The Netherlands Antilles are included in the Netherlands' total
-        Polynesia is included in New Zealand's total
-        Serbia and Montenegro share the same data until 01/05/2008
-        Southern and East Africa is included in South Africa's total
-        Virgin Islands, British, Turks and Caicos Islands are included in the 
-        United Kingdom's total
-        Australian Antarctic Territory is included in Australia's total
+        Virgin Islands, United States are included in the USA's total. 
+        The Netherlands Antilles are included in the Netherlands' total. 
+        Polynesia is included in New Zealand's total. 
+        Serbia and Montenegro share the same data until 01/05/2008. 
+        Southern and East Africa is included in South Africa's total. 
+        Virgin Islands, British, Turks and Caicos Islands are included in the United Kingdom's total. 
+        Australian Antarctic Territory is included in Australia's total. 
     </p>
+    <div id="State_map"></div>
+
     <script type="text/javascript">
   
-        var spec2 = "js/merchandise_exports_per_country.json";
-        vegaEmbed('#Country_map', spec2).then(function(result) {
+        var spec1 = "js/merchandise_exports_per_country.json";
+        vegaEmbed('#Country_map', spec1).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+        var spec2 = "js/merchandise_exports_per_state.json";
+        vegaEmbed('#State_map', spec2).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
